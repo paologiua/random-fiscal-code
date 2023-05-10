@@ -26,19 +26,19 @@ def random_date(start_date, end_date):
     
     return random_date.strftime('%d/%m/%Y')
 
-SEXS = ['M', 'F']
+GENDERS = ['M', 'F']
 MIN_AGE = 18
 MAX_AGE = 100
 START_DATE = datetime.date.today() - datetime.timedelta(days=MAX_AGE*365)
 END_DATE = datetime.date.today() - datetime.timedelta(days=MIN_AGE*365)
 
-sex = random.choice(SEXS)
-surname = random.choice(pd.read_csv('data/surnames.csv').surname.values)
-name = random.choice(pd.read_csv('data/male_names.csv' if sex == 'M' else 'data/female_names.csv').name.values)
+gender = random.choice(GENDERS)
+lastname = random.choice(pd.read_csv('data/surnames.csv').surname.values)
+firstname = random.choice(pd.read_csv('data/male_names.csv' if gender == 'M' else 'data/female_names.csv').name.values)
 birthdate = random_date(START_DATE, END_DATE)
 birthplace = random.choice(pd.read_csv('data/municipalities.csv').to_dict('records'))
 
-fiscalCode = codicefiscale.encode(surname=surname, name=name, sex=sex, birthdate=birthdate, birthplace=birthplace['name'])
+fiscalCode = codicefiscale.encode(lastname=lastname, firstname=firstname, gender=gender, birthdate=birthdate, birthplace=birthplace['name'])
 print(
 f'''
 ####################
@@ -55,9 +55,9 @@ for arg in sys.argv:
     if arg == '--extended' or arg == '-e':
         print(
 f'''#                  #
-# Surname: {surname}
-# Name: {name}
-# Sex: {sex}
+# Lastname: {lastname}
+# Firstname: {firstname}
+# Gender: {gender}
 # Birthdate: {birthdate}
 # Birthplace: {birthplace['name']} ({birthplace['province']})
 #                  #
