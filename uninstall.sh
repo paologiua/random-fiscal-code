@@ -7,3 +7,4 @@ fi
 ALIAS="$(echo "alias random-fiscal-code='\$HOME\/.random-fiscal-code\/.\/start.sh'")"
 
 sed -i'.bak' "s/$ALIAS//" $HOME/.zshrc && rm $HOME/.zshrc.bak
+source $HOME/.zshrc 
