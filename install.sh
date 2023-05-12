@@ -21,15 +21,25 @@ then
     exit
 fi
 
+if [ ! -f $HOME/.random-fiscal-code ]; then
+	rm -rf $HOME/.random-fiscal-code**
+fi
+
 git clone https://github.com/paologiua/random-fiscal-code.git $HOME/.random-fiscal-code
 
 pip3 install pandas
 pip3 install python-codicefiscale
 pip3 install clipboard
 
-ALIAS="alias random-fiscal-code='$HOME/.random-fiscal-code/./start.sh'"
+ALIAS="$(echo "alias random-fiscal-code='\$HOME\/.random-fiscal-code\/.\/start.sh'")"
 
 sed -i'.bak' "s/$ALIAS//" $HOME/.zshrc && rm $HOME/.zshrc.bak
-echo "$(cat $HOME/.zshrc)\n\n$ALIAS" > $HOME/.zshrc
+echo -e -n "$(cat $HOME/.zshrc)\n\n$(echo $ALIAS | tr -d "\\")" > $HOME/.zshrc
+source $HOME/.zshrc 
 
-echo "random-fiscal-code is installed"
+echo
+echo "###################################"
+echo "#                                 #"
+echo "# random-fiscal-code is installed #"
+echo "#                                 #"
+echo "###################################"
