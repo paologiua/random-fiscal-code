@@ -35,7 +35,6 @@ ALIAS="$(echo "alias random-fiscal-code='\$HOME\/.random-fiscal-code\/.\/start.s
 
 sed -i'.bak' "s/$ALIAS//" $HOME/.zshrc && rm $HOME/.zshrc.bak
 echo -e -n "$(cat $HOME/.zshrc)\n\n$(echo $ALIAS | tr -d "\\")" > $HOME/.zshrc
-source $HOME/.zshrc 
 
 echo
 echo "###################################"
@@ -43,3 +42,4 @@ echo "#                                 #"
 echo "# random-fiscal-code is installed #"
 echo "#                                 #"
 echo "###################################"
+echo
