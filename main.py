@@ -14,7 +14,6 @@ Arguments:
 
 from codicefiscale import codicefiscale
 import pandas as pd
-import string
 import datetime
 import random
 

@@ -1,5 +1,5 @@
 #!/bin/sh
 ABSPATH=$(cd "$(dirname "$0")"; pwd -P)
 cd $ABSPATH
-python3 main.py $1 $2
+venv/bin/python main.py $1 $2
 
