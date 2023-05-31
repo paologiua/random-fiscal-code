@@ -7,7 +7,7 @@ then
     exit
 fi
 
-if [ ! -f $HOME/.random-fiscal-code ]; then
+if [ -d $HOME/.random-fiscal-code ]; then
 	rm -rf $HOME/.random-fiscal-code**
 fi
 
