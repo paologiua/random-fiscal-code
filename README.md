@@ -66,7 +66,7 @@ Contributions are welcome! Please feel free to open issues or submit pull reques
 
 This program uses the following libraries:
 
-- [python-fiscalcode](https://github.com/scemama/python-fiscalcode)
+- [python-codicefiscale](https://pypi.org/project/python-codicefiscale/)
 - [clipboard](https://pypi.org/project/clipboard/)
 - [pandas](https://pandas.pydata.org/)
 
