@@ -3,6 +3,9 @@
 ABSPATH=$(cd "$(dirname "$0")"; pwd -P)
 cd $ABSPATH
 
+OS=$(echo $(uname) | tr '[:upper:]' '[:lower:]')
+ARCH=$(uname -m)
+
 if [ ! -d venv ]; then
 	python3 -m venv venv
   source venv/bin/activate
@@ -11,9 +14,9 @@ fi
 
 source venv/bin/activate
 
-pyinstaller --add-data "venv/lib/$(ls venv/lib)/site-packages/codicefiscale:./codicefiscale" --onefile main.py
+pyinstaller --add-data "venv/lib/$(ls venv/lib/ | head -1)/site-packages/codicefiscale:./codicefiscale" --onefile main.py
 
-mv dist/main dist/random-fiscal-code-$(uname -m)
+mv dist/main dist/random-fiscal-code-$OS-$ARCH
 
 echo
 echo "###############################"

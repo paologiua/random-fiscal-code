@@ -1,5 +1,9 @@
 #!/bin/sh
 ABSPATH=$(cd "$(dirname "$0")"; pwd -P)
 cd $ABSPATH
-dist/random-fiscal-code-$(uname -m) $1 $2
+
+OS=$(echo $(uname) | tr '[:upper:]' '[:lower:]')
+ARCH=$(uname -m)
+
+dist/random-fiscal-code-$OS-$ARCH $1 $2
 
