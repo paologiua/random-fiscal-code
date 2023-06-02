@@ -14,9 +14,9 @@ fi
 sed -i'.bak' "s/$ALIAS//" $HOME/$SHELL_CONFIG && rm $HOME/$SHELL_CONFIG.bak
 
 echo
-echo "#####################################"
-echo "#                                   #"
-echo "# random-fiscal-code is uninstalled #"
-echo "#                                   #"
-echo "#####################################"
+echo "##################################"
+echo "#                                #"
+echo "# random-fiscal-code uninstalled #"
+echo "#                                #"
+echo "##################################"
 echo

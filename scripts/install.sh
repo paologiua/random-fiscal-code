@@ -24,9 +24,9 @@ sed -i'.bak' "s/$ALIAS//" $HOME/$SHELL_CONFIG && rm $HOME/$SHELL_CONFIG.bak
 echo -e -n "$(cat $HOME/$SHELL_CONFIG)\n\n$(echo $ALIAS | tr -d "\\")" > $HOME/$SHELL_CONFIG
 
 echo
-echo "###################################"
-echo "#                                 #"
-echo "# random-fiscal-code is installed #"
-echo "#                                 #"
-echo "###################################"
+echo "################################"
+echo "#                              #"
+echo "# random-fiscal-code installed #"
+echo "#                              #"
+echo "################################"
 echo
