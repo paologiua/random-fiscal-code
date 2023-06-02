@@ -1,5 +1,12 @@
 #!/bin/sh
 
+which -s git >/dev/null 2>&1
+if [[ $? != 0 ]];
+then
+    echo "Git is not installed!"
+    exit
+fi
+
 OS=$(echo $(uname) | tr '[:upper:]' '[:lower:]')
 ARCH=$(uname -m)
 
