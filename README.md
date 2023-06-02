@@ -15,7 +15,7 @@
 Run this command in terminal:
 
    ```
-   $ curl -L https://raw.githubusercontent.com/paologiua/random-fiscal-code/main/install.sh | bash
+   $ curl -L https://raw.githubusercontent.com/paologiua/random-fiscal-code/main/scripts/install.sh | bash
    ```
 
 ## Uninstallation
@@ -23,7 +23,7 @@ Run this command in terminal:
 Run this command in terminal:
 
    ```
-   $ curl -L https://raw.githubusercontent.com/paologiua/random-fiscal-code/main/uninstall.sh | bash
+   $ curl -L https://raw.githubusercontent.com/paologiua/random-fiscal-code/main/scripts/uninstall.sh | bash
    ```
 
 ## Usage
