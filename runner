@@ -15,7 +15,6 @@ if [ -z "$1" ]; then
   echo
   echo "Command list:"
   for script in scripts/*; do printf "*\t$(basename $script .sh)\n"; done
-  echo
 	exit
 fi
 

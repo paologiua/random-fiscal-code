@@ -10,7 +10,7 @@ Arguments:
 -h or --help\t\tPrint Help (this message) and exit
 -copy\t\t\tCopy the random fiscal code to the clipboard
 -e or --extended\tShow more information""")
-        exit()
+        sys.exit()
 
 from codicefiscale import codicefiscale
 import pandas as pd
