@@ -8,7 +8,7 @@ a = Analysis(
     ['../src/main.py'],
     pathex=[],
     binaries=[],
-    datas=[('venv/lib/python3.9/site-packages/codicefiscale', './codicefiscale')],
+    datas=[('../venv/lib/python3.9/site-packages/codicefiscale', './codicefiscale')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

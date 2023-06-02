@@ -16,7 +16,7 @@ pyinstaller \
   --distpath bin \
   --name random-fiscal-code-$OS-$ARCH \
   --specpath specs \
-  --add-data "venv/lib/$(ls venv/lib/ | head -1)/site-packages/codicefiscale:./codicefiscale" \
+  --add-data "../venv/lib/$(ls venv/lib/ | head -1)/site-packages/codicefiscale:./codicefiscale" \
   --onefile src/main.py
 
 if [ -d venv ]; then
