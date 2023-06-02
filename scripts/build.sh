@@ -32,9 +32,9 @@ if [ -d venv ]; then
 fi
 
 echo
-echo "###############################"
-echo "#                             #"
-echo "# random-fiscal-code is built #"
-echo "#                             #"
-echo "###############################"
+echo "############################"
+echo "#                          #"
+echo "# random-fiscal-code built #"
+echo "#                          #"
+echo "############################"
 echo
