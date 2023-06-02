@@ -5,6 +5,20 @@ cd $ABSPATH
 
 SCRIPT_NAME=$(ls scripts/ | grep "$1.sh" | head -1)
 
+if [ -z "$1" ]; then
+  echo "Tool to execute commands!"
+  echo
+  echo "Usage $0 [command] [params]"
+  echo
+  echo "Example:"
+  printf "\t$0 init\n"
+  echo
+  echo "Command list:"
+  for script in scripts/*; do printf "*\t$(basename $script .sh)\n"; done
+  echo
+	exit
+fi
+
 if [ "$SCRIPT_NAME" != "$1.sh" ]; then
 	echo "Command not found"
 	exit
