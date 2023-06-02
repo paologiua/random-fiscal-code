@@ -7,8 +7,12 @@ then
     exit
 fi
 
-export SHELL_CONFIG=$(if [ "$(basename $SHELL)" = "zsh" ]; then echo .zshrc; else echo .bashrc; fi)
-export ALIAS="$(echo "alias random-fiscal-code='\$HOME\/.random-fiscal-code\/scripts\/.\/start.sh'")"
+OS=$(echo $(uname) | tr '[:upper:]' '[:lower:]')
+ARCH=$(uname -m)
+BINARY=random-fiscal-code-$OS-$ARCH
+
+SHELL_CONFIG=$(if [ "$(basename $SHELL)" = "zsh" ]; then echo .zshrc; else echo .bashrc; fi)
+ALIAS="$(echo "alias random-fiscal-code='\$HOME\/.random-fiscal-code\/bin\/$BINARY'")"
 
 if [ -d $HOME/.random-fiscal-code ]; then
 	rm -rf $HOME/.random-fiscal-code**

@@ -1,4 +1,8 @@
 import sys
+import os
+
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(sys.argv[0])))
+os.chdir(ROOT_DIR)
 
 for arg in sys.argv:
     if arg == '--help' or arg == '-h':
