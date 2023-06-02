@@ -2,7 +2,7 @@ import sys
 
 for arg in sys.argv:
     if arg == '--help' or arg == '-h':
-        print ("""RandomFiscalCode, version 0.0.1
+        print("""RandomFiscalCode, version 0.0.1
 
 Usage: random-fiscal-code [arguments]
 
