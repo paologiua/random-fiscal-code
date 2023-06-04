@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ABSPATH=$(git rev-parse --show-toplevel)
 cd $ABSPATH

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 OS=$(echo $(uname) | tr '[:upper:]' '[:lower:]')
 ARCH=$(uname -m)

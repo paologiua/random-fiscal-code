@@ -1,7 +1,20 @@
 import sys
 import os
 
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(sys.argv[0])))
+ROOT_DIR = os.path.expanduser("~") + "/.random-fiscal-code"
+
+if not os.path.isdir(ROOT_DIR):
+    print("I can't find the database. Download in progress...")
+    try:
+        import git
+        git.Repo.clone_from("https://github.com/paologiua/random-fiscal-code.git", ROOT_DIR, branch="main")
+
+        print(f'''Database downloaded in {ROOT_DIR}''')
+    except:
+        print("Download failed!")
+
+        sys.exit()
+
 os.chdir(ROOT_DIR)
 
 for arg in sys.argv:

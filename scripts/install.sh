@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 which -s git >/dev/null 2>&1
 if [[ $? != 0 ]];
@@ -16,7 +16,7 @@ fi
 
 git clone https://github.com/paologiua/random-fiscal-code.git $HOME/.random-fiscal-code
 
-sed -i'.bak' "s/$EXPORT//" $HOME/$SHELL_CONFIG && rm $HOME/$SHELL_CONFIG.bak
+sed -i'.bak' "s/$EXPORT//" $HOME/$SHELL_CONFIG
 echo -e -n "$(cat $HOME/$SHELL_CONFIG)\n\n$(echo $EXPORT | tr -d "\\")" > $HOME/$SHELL_CONFIG
 
 echo
