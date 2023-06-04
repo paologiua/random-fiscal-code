@@ -69,6 +69,7 @@ This program uses the following libraries:
 - [python-codicefiscale](https://pypi.org/project/python-codicefiscale/)
 - [clipboard](https://pypi.org/project/clipboard/)
 - [pandas](https://pandas.pydata.org/)
+- [GitPython](https://gitpython.readthedocs.io/en/stable/)
 
 Thank you to the contributors of these projects.
 
