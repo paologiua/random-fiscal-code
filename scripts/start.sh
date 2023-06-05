@@ -4,7 +4,7 @@ cd $(dirname $0)
 ABSPATH=$(git rev-parse --show-toplevel)
 cd $ABSPATH
 
-git fetch
+git fetch > /dev/null 2>&1
 if [[ $(git status) != *"Your branch is up to date"* ]]; then
     read -r -p "New update available. Do you want to install it? [y/N] " response
 
