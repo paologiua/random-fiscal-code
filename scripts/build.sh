@@ -7,6 +7,7 @@ then
     exit
 fi
 
+cd $(dirname $0)
 ABSPATH=$(git rev-parse --show-toplevel)
 cd $ABSPATH
 
