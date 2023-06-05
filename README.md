@@ -70,7 +70,7 @@ This program uses the following libraries:
 - [clipboard](https://pypi.org/project/clipboard/)
 - [pandas](https://pandas.pydata.org/)
 - [GitPython](https://gitpython.readthedocs.io/en/stable/)
-
+ 
 Thank you to the contributors of these projects.
 
 ## Disclaimer
