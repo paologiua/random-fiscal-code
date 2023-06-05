@@ -1,5 +1,5 @@
 # random-fiscal-code
-
+ 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 **random-fiscal-code** is a Python program that allows you to generate random Italian fiscal codes from the command line.
