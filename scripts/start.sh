@@ -5,7 +5,7 @@ ABSPATH=$(git rev-parse --show-toplevel)
 cd $ABSPATH
 
 git fetch
-if [[ "$(git status -s)" != "" ]]; then
+if [[ $(git status) != *"Your branch is up to date"* ]]; then
     read -r -p "New update available. Do you want to install it? [y/N] " response
 
     if [[ "$response" = "y" || "$response" = "Y" ]]; then
