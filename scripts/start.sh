@@ -9,7 +9,9 @@ if [[ $(git status) != *"Your branch is up to date"* ]]; then
     read -r -p "New update available. Do you want to install it? [y/N] " response
 
     if [[ "$response" = "y" || "$response" = "Y" ]]; then
+        cd $HOME
         curl -L https://raw.githubusercontent.com/paologiua/random-fiscal-code/main/scripts/install.sh | bash
+        cd $HOME/.random-fiscal-code
     fi
 fi
 
